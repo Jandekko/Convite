@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Especial</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+  <div class="container">
+    <h1>Oi! Bruna, quero jogar um jogo com você!</h1>
+    <button id="start-btn">Vamos Começar?</button>
+
+    <!-- Etapa da senha -->
+    <div id="password-step" class="hidden">
+      <p>A sua senha é algo que você gosta de tomar junto com leite e que recentemente comprei para experimentar!</p>
+      <p>Aviso: Lembre de colocar a primeira letra maiúscula</p>
+      <input type="text" id="password-input" placeholder="Digite a senha">
+      <button id="check-password-btn">Conferir</button>
+      <p id="error-message" class="hidden">Senha incorreta! Tente novamente.</p>
+    </div>
+
+    <!-- Etapas de textos com imagens -->
+    <div id="text-stage" class="hidden">
+      <div id="text-content">
+        <p id="dynamic-text"></p>
+        <img id="dynamic-image" class="small-image" src="" alt="">
+      </div>
+      <button id="prev-btn" class="hidden">Voltar</button>
+      <button id="next-btn">Próximo</button>
+    </div>
+
+    <!-- Última etapa - Etapa final -->
+    <div id="final-step-button" class="hidden">
+      <button id="final-btn">Fim</button>
+    </div>
+
+    <!-- Última etapa - Pergunta final -->
+    <div id="final-step" class="hidden">
+      <p>Gostaria de lhe fazer uma pergunta...</p>
+      <button id="reveal-question-btn">Responder</button>
+    </div>
+
+    <!-- Pergunta final -->
+    <div id="question-step" class="hidden">
+      <p>Você, que é a garota mais linda desse mundo, aceita sair comigo? <span class="anxious-face">😅</span></p>
+      <button id="yes-btn" class="pulsing">Sim</button>
+      <button id="no-btn" class="response-btn">Não</button>
+    </div>
+
+    <div id="response" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
